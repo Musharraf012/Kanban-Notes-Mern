@@ -27,7 +27,6 @@ function AppContent() {
     message: "",
     type: "success",
   });
-  console.log("notes", notes);
 
   const handleAddNote = (status = null) => {
     setNoteToEdit(null);

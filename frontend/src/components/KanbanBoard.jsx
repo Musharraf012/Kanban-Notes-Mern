@@ -128,7 +128,6 @@ const KanbanBoard = ({ onEdit, onAddNote }) => {
   const handleDragEnd = (event) => {
     const { active, over } = event;
     setActiveId(null);
-    console.log("Drag ended!", active.id, over?.id);
 
     if (!over) return;
 
@@ -147,7 +146,6 @@ const KanbanBoard = ({ onEdit, onAddNote }) => {
     }
 
     if (targetStatus !== draggedNote.status) {
-      console.log("Moving note", active.id, "to", targetStatus);
       moveNote(active.id, targetStatus);
     }
   };
